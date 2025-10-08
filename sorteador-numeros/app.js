@@ -15,6 +15,8 @@ function sortearNumero(){
 
     }
 
+    let resultado = document.getElementById('resultado');
+    resultado.innerHTML = ` <label class="texto__paragrafo">Números sorteados:  ${numerosSorteados}</label>`;
     console.log(numerosSorteados);
 
 
