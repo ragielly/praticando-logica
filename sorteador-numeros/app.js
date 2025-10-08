@@ -11,9 +11,17 @@ function sortearNumero(){
     for(let i = 0; i< quantidade; i++ ){
 
         numero = obterNumeroAleatorio(de,ate);
+        
+        while(numerosSorteados.includes(numero)){
+            
+            numero = obterNumeroAleatorio(de,ate);
+            
+        }
+        
         numerosSorteados.push(numero);
-
     }
+
+    numerosSorteados.sort((a, b) => a - b);
 
     let resultado = document.getElementById('resultado');
     resultado.innerHTML = ` <label class="texto__paragrafo">Números sorteados:  ${numerosSorteados}</label>`;
