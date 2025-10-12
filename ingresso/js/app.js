@@ -20,6 +20,7 @@ function comprar(){
             break;
     
         default:
+             alert('Opção Invalida');
             break;
     }
 }
