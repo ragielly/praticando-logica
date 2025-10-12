@@ -52,5 +52,14 @@ function comprarInferior(qtd){
 
 }
 function comprarSuperior(qtd){
+    let qtdSuperior = parseInt(document.getElementById('qtd-superior').textContent);
+    if(qtd > qtdSuperior){
+        alert('Quantidade indisponivel');
+    }else{
+        qtdSuperior = qtdSuperior - qtd;
 
+        document.getElementById('qtd-superior').textContent = qtdSuperior;
+        alert('Compra realizada com sucesso');
+
+    }
 }
